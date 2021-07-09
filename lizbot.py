@@ -17,4 +17,4 @@ async def test(ctx):
 with open('config.json') as a:
     data = json.load(a)
 
-bot.run(data['token'])
+bot.run(data['token'])  
