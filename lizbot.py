@@ -6,7 +6,7 @@ import json
 import random
 
 # Create the bot variable
-bot = commands.Bot(command_prefix=["!liz ", "!Liz ","!b ", "!B "], owner_id=488130273662337034)
+bot = commands.Bot(command_prefix=["!liz ", "!Liz ","!b ", "!B "], owner_id=[488130273662337034, 339170260064141322])
 
 @bot.event 
 async def on_ready():
