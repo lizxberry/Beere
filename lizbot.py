@@ -199,8 +199,6 @@ async def git(ctx):
 async def ily(ctx):
     if ctx.author.id == 488130273662337034:
         text = "I LOVE YOU SO MUCH LIZ"
-    if ctx.author.id == 449966150898417664:
-        text = "Sure, ily ig... ~~weirdo~~"
     else: text = (f"olive you, my good friend {ctx.author.name}!")
     await ctx.send(text)
 
