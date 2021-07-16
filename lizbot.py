@@ -201,7 +201,7 @@ async def ily(ctx):
         text = "I LOVE YOU SO MUCH LIZ"
     if ctx.author.id == 449966150898417664:
         text = "Sure, ily ig... ~~weirdo~~"
-    else: text = (f"ilyt, my good friend {ctx.author.name}")
+    else: text = (f"olive you, my good friend {ctx.author.name}!")
     await ctx.send(text)
 
 @bot.command()
@@ -226,7 +226,7 @@ async def server(ctx):
 
 @bot.command() 
 async def DM(ctx, user: discord.User, *, message=None): 
-    message = message or "This message is sent via DM" 
+    message = message or "This message has been sent via DM" 
     await user.send(message)
 
 @bot.event
@@ -281,6 +281,10 @@ async def fact(ctx):
         "Apples float in water, because 25% of their volume is made of air",
         "Beere means berry in German!",
         "A single gnocchi is called a 'gnocco' (Liz speaks Italian, she'd know)",
+        "Honey can never go out of date",
+        "Baby carrots are just regular carrots that have been shaved down to the bite-size pieces",
+        "Peanuts aren't nuts, they're legumes",
+        "Carrots were originally purple and they also come in white as well as orange"
     ]
 
     await ctx.send(random.choice(food_facts))
@@ -313,7 +317,12 @@ async def quip(ctx):
         "You're one in a melon!",
         "Sending you some encouragemint!",
         "You are a cute cucumber!",
-        "You have a pizza my heart"
+        "You have a pizza my heart",
+        "Avo good day!",
+        "I donut what I'd do without you",
+        "I love you very mochi",
+        "I'm bananas for you",
+        "Things will get feta!"
     ]
 
     await ctx.send(random.choice(food_puns))
