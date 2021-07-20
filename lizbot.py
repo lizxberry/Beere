@@ -49,6 +49,9 @@ async def help(ctx):
         name = "!b about", value = "Tells you about the bot!",
         inline = False)
     embed.add_field(
+        name= "!b suggest", value= "Give bot suggestions!",
+        inline = False)
+    embed.add_field(
         name = "!b helpfun", value = "Cute commands",
         inline = False)
     embed.add_field(
@@ -105,8 +108,8 @@ async def helpcook(ctx):
         value = "chemical reactions that occur within cooking",
         inline = False)
     embed.add_field(
-        name="coming soon",
-        value="-",
+        name="!b helprec",
+        value="Disover recipes and cooking tips",
         inline=False)
     return await ctx.send(embed=embed)
 
@@ -287,7 +290,7 @@ async def fact(ctx):
 
     await ctx.send(random.choice(food_facts))
 
-@bot.command(aliases=['foodpun'])
+@bot.command(aliases=['pun'])
 async def quip(ctx):
     food_puns = [
         "You're a little cheesy but still grate!",
@@ -339,7 +342,7 @@ async def helprec(ctx):
     embed.description = "'Food. Food? Food!'"
     embed.title = "Cooking time!"
     embed.add_field(
-        name="!b recipe [keyword]",
+        name="!b randomrecipe [keyword]",
         value= "This will show you a recipe. Without a keyword, you will get a random recipe!",
         inline=False)
     embed.add_field(
