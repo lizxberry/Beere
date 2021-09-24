@@ -289,7 +289,39 @@ async def fact(ctx):
     ]
 
     await ctx.send(random.choice(food_facts))
+@bot.command(aliases=['deadchat'])
+async def topic(ctx):
+    topic = [
+        "What is your favourite food?",
+        "What is your go-to order when getting take-away?",
+        "What is your go-to order when eating out?",
+        "What is your favourite snack?",
+        "What is your favourite fruit?",
+        "What is your favourite chocolate bar (candybar)?",
+        "What is your favourite sweet/candy?",
+        "Would you say you are a good chef or baker?",
+        "What is your favourite thing to cook?",
+        "What made you start cooking or baking?",
+        "What started your love of food?",
+        "What is your favourite vegetable?",
+        "Do you have any food opinions that are unpopular?",
+        "What is your opinion on fast food?",
+        "What would you put into a salad?",
+        "What would you put into a burger?",
+        "What do you often snack on?",
+        "What is something you have always want to cook or bake?",
+        "Do you have any allergies or intolerances? Did you use to have any?",
+        "What are your dietary requirements?",
+        "What weird food pairings do you put together?",
+        "What is your favourite herb or spice?",
+        "What is your go-to breakfast meal?",
+        "What is your go-to lunch meal?",
+        "What is your go-to dinner meal?",
+        
 
+    ]
+
+    await ctx.send(random.choice(topic))
 @bot.command(aliases=['pun'])
 async def quip(ctx):
     food_puns = [
@@ -342,7 +374,7 @@ async def helprec(ctx):
     embed.description = "'Food. Food? Food!'"
     embed.title = "Cooking time!"
     embed.add_field(
-        name="!b randomrecipe [keyword]",
+        name="!b recipe [keyword]",
         value= "This will show you a recipe. Without a keyword, you will get a random recipe!",
         inline=False)
     embed.add_field(
@@ -356,7 +388,7 @@ async def helprec(ctx):
     return await ctx.send(embed=embed)
 
 @bot.command()
-async def randomrecipe(ctx, *, tags: str = None):
+async def recipe(ctx, *, tags: str = None):
     with open('lizrec.json') as a:
         data = json.load(a)
     if tags:
@@ -371,7 +403,6 @@ async def randomrecipe(ctx, *, tags: str = None):
     selected_recipe = random.choice(valid_recipes)
     output = f"This is a recipe for\n**{selected_recipe['name']}**\n*{selected_recipe['Info']}*\n{selected_recipe['Ingredients']}\n{selected_recipe['Method']}"
     await ctx.send(output) 
-
 
 @bot.command(aliases = ["dietaryrequirement", "dietaryrequirements"])
 async def dr(ctx, *, tags: str = None):
